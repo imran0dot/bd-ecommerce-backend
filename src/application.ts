@@ -7,10 +7,10 @@ const app = express();
 // parsers 
 app.use(express.json());
 app.use(cors());
-app.use(globalError);
-
-
 
 app.use(mainRouter);
-app.use('*', notFound)
+
+app.use('*', notFound);
+
+app.use(globalError);
 export default app;

@@ -1,11 +1,16 @@
 import { Router } from "express";
 import { categoryRoute } from "../models/categories/categories.route";
+import { userRouter } from "../models/users/user.route";
 
 const router = Router();
 const routes = [
     {
         path: 'category',
         route: categoryRoute
+    },
+    {
+        path: 'user',
+        route: userRouter
     }
 ];
 
